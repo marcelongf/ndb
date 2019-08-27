@@ -1,10 +1,9 @@
 {
-  "name": "ndb",
+  "name": "nodebee",
   "version": "0.0.1",
-  "description": "ndb CLI",
-  "private": true,
+  "description": "nodebee CLI",
   "bin": {
-    "ndb": "bin/ndb"
+    "nodebee": "bin/nodebee"
   },
   "scripts": {
     "format": "prettier --write **/*.{js,json} && standard --fix",
