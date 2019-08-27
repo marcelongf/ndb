@@ -1,5 +1,5 @@
 {
-  "name": "nodebee",
+  "name": "@marcelonassar/nodebee",
   "version": "0.0.1",
   "description": "nodebee CLI",
   "bin": {
