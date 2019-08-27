@@ -1,0 +1,17 @@
+const Animal = require('../models/Animal.js');
+
+module.exports = {
+    async new(req, res){
+        const { specie, name } = req.body;
+
+        Animal.create({
+            specie,
+            name,
+        })
+
+
+        const display = { info: `${name} is a ${specie}` };
+
+        res.json(display);
+    }
+}

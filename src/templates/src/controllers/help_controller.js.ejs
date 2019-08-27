@@ -1,0 +1,9 @@
+module.exports = {
+    async show(req, res){
+        const infos = {
+            whatToDoNext: "The project <%= props.projectName %> is online! Now that you tested a get request by /help, try a POST request, a basic model is already made for tou to test. You just have to make a POST request to http://localhost:3334?specie=dog&name=toby",
+        }
+
+        res.json(infos)
+    },
+};

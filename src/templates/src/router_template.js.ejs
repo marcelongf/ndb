@@ -1,0 +1,11 @@
+const express = require('express');
+const routes = express.Router();
+
+const HelpController = require('./controllers/HelpController.js')
+const AnimalController = require('./controllers/AnimalController.js')
+
+//Routers can be created with the command 'ndb route <URL> <FILENAME.FUNCTION>'
+routes.get('/help', HelpController.show);
+routes.post('/forest', AnimalController.new )
+
+module.exports = routes;

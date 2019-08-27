@@ -1,0 +1,16 @@
+const { Schema, model } = require('mongoose');
+
+const animalSchema = new Schema({
+    species: {
+        type: String,
+        required: true,
+    },
+    name: {
+        type:String,
+        required: true,
+    }
+},{
+    timestamps: true,
+});
+
+module.exports = model('Animal', animalSchema);
