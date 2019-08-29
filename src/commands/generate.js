@@ -5,17 +5,38 @@ module.exports = {
     const {
       parameters,
       template: { generate },
-      print: { info }
+      print: { info, success, error }
     } = toolbox
 
-    const name = parameters.first
+    const commandType = parameters.first;
 
-    await generate({
-      template: 'model.js.ejs',
-      target: `models/${name}-model.js`,
+    const atributes = parameters.array;
+    atributes.shift();
+
+    success(atributes);
+
+    const display = atributes.reduce((acc, curr) => {
+      error(curr)
+      let [name, type] = curr.split(":");
+      
+      success(name);
+      success(type)
+
+      return {...acc, 
+        name: {
+          type,
+        }
+      }[ { obj: true, } ]
+    });
+
+    console.log(display);
+
+    /*await generate({
+      template: './src/models/default-model.js.ejs',
+      target: `models/${name}.js`,
       props: { name }
     })
 
-    info(`Generated file at models/${name}-model.js`)
+    info(`Generated file at models/${name}-model.js`)*/
   }
 }
