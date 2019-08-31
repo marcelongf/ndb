@@ -1,25 +1,21 @@
-# ndb CLI
+# NodeBox
 
-A CLI for ndb.
+NodeBox is a command line interface to create Node APIs and components with controllers and models, returning JSON. All this with simple node based commands, using the GlueGun enviroment.
 
-## Customizing your CLI
+## Getting Started
 
-Check out the documentation at https://github.com/infinitered/gluegun/tree/master/docs.
-
-## Publishing to NPM
-
-To package your CLI up for NPM, do this:
+To install Nodebox you can run:
 
 ```shell
-$ npm login
-$ npm whoami
-$ npm lint
-$ npm test
-(if typescript, run `npm run build` here)
-$ npm publish
+$ npm install @marcelonassar/ndb
 ```
 
-# License
+## Basic Commands
 
-MIT - see LICENSE
+You can run the following command to create a new Node project:
 
+```shell
+$ ndb new <PROJECT_NAME>
+```
+
+This will create a new projects with basic routes and a server.js file.
